@@ -1,6 +1,6 @@
 {
   "name": "@tianbo/tb-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "基于node的react脚手架工具",
   "main": "index.js",
   "bin": {
