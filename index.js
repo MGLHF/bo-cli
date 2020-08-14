@@ -13,6 +13,16 @@ program.version('1.0.0', '-v, --version')
     if (!fs.existsSync(name)) {
       inquirer.prompt([
         {
+          type: 'list',
+          name: 'proType',
+          message: '请选择项目类型',
+          choices: [
+            { name: '普通react项目', value: 'https://github.com:MGLHF/clone-demo#master' },
+            { name: 'vue+react微前端项目', value: 'https://github.com:MGLHF/bo-cli-pro#master' }
+          ]
+        },
+        {
+          type: 'input',
           name: 'description',
           message: '请输入项目描述'
         },
@@ -23,7 +33,7 @@ program.version('1.0.0', '-v, --version')
       ]).then((answers) => {
         const spinner = ora('正在下载模板...');
         spinner.start();
-        download('https://github.com:MGLHF/bo-cli-pro#master', name, { clone: true }, (err) => {
+        download(answers.proType, name, { clone: true }, (err) => {
           if (err) {
             spinner.stop();
             console.log(symbols.error, chalk.red(err));
@@ -46,7 +56,7 @@ program.version('1.0.0', '-v, --version')
             console.log(`${chalk.yellow(`cd ${name}`)}`);
             console.log(`${chalk.yellow('npm install')}`);
             console.log(`${chalk.yellow('npm run dev')}`);
-            console.log(`${chalk.green(`访问地址：localhost:8082`)}`);
+            // console.log(`${chalk.green(`访问地址：localhost:8082`)}`);
           }
         })
       })
