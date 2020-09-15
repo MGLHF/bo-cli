@@ -1,11 +1,12 @@
 {
   "name": "bo-cli",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "基于node的多项目模版脚手架工具",
   "main": "index.js",
   "bin": {
     "bo-cli": "index.js"
   },
+  "keywords": ["脚手架", "微前端", "react", "vue", "node", "bff"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
