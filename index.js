@@ -17,9 +17,9 @@ program.version('1.0.0', '-v, --version')
           name: 'proType',
           message: '请选择项目类型',
           choices: [
-            { name: '普通react项目', value: 'https://github.com:MGLHF/clone-demo#master' },
-            { name: 'vue+react微前端项目', value: 'https://github.com:MGLHF/bo-cli-pro#master' },
-            { name: 'koa2 bff项目', value: 'https://github.com:MGLHF/koa-bff-demo#master' },
+            { name: '普通react项目模版', value: 'https://github.com:MGLHF/clone-demo#master' },
+            { name: 'vue+react微前端项目模版', value: 'https://github.com:MGLHF/bo-cli-pro#master' },
+            { name: 'koa2 bff项目模版', value: 'https://github.com:MGLHF/koa-bff-demo#master' },
           ]
         },
         {
